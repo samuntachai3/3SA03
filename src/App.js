@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-
+import CharacterCard from './CharacterCard';
+const word = "Hello";
 function App() {
-  return (
-    <div>
-    Hello World Hello World <br/>
-    Hello {"World"}
-    </div>
-  );
+ return (
+<div>
+ {
+ Array.from(word).map((c, i) => <CharacterCard value={c} key={i}/>)
+ }
+ </div>
+ );
 }
-
 export default App;
